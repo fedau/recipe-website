@@ -3,8 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { prisma } from "../server/db/client";
 
-type Props =
-  { recipes: recipe[] };
+type Props = { recipes: recipe[] };
 
 // Fetch all recipes (in /pages/index.tsx)
 export async function getStaticProps() {
@@ -33,7 +32,7 @@ const Home: NextPage = (props) => {
         </p>
         <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-3 lg:w-2/3">
           {((props as Props).recipes as recipe[]).map((recipe) => (
-            <div>
+            <div key={recipe.id}>
               <p>{recipe?.title}</p>
               <p>{recipe?.description}</p>
               <p>{recipe?.ingredients}</p>
