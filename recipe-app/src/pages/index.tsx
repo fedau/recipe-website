@@ -1,13 +1,13 @@
-import { recipe } from "@prisma/client";
-import type { NextPage } from "next";
+import { Recipe } from "@prisma/client";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { prisma } from "../server/db/client";
 
-type Props =
-  { recipes: recipe[] };
+type RecipesProps =
+  { recipes: Recipe[] };
 
 // Fetch all recipes (in /pages/index.tsx)
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const recipes = await prisma.recipe.findMany();
 
   return {
@@ -15,7 +15,7 @@ export async function getStaticProps() {
   };
 }
 
-const Home: NextPage = (props) => {
+const Home: NextPage<RecipesProps> = ({ recipes }) => {
   return (
     <>
       <Head>
@@ -32,7 +32,7 @@ const Home: NextPage = (props) => {
           This stack uses: a lot of time and effort and we will never make it
         </p>
         <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-3 lg:w-2/3">
-          {((props as Props).recipes as recipe[]).map((recipe) => (
+          {recipes.map((recipe) => (
             <div>
               <p>{recipe?.title}</p>
               <p>{recipe?.description}</p>
