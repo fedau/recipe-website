@@ -4,8 +4,8 @@ A detailed list of tasks required to setup the first POC.
 
 ## List of tasks
 
-- [ ] setup a new project with nextjs, react, prisma, ..
-- [ ] setup database (install & configure)
+- [x] setup a new project with nextjs, react, prisma, ..
+- [x] setup database (install & configure)
 - [ ] create table schema
 - [ ] connect to DB
 - [ ] create recipes table
