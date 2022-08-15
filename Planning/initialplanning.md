@@ -42,7 +42,7 @@
 ## Roadmap
 
 - [x] Write user stories
-- [ ] Add user stories to Trello
+- [x] Add user stories to Trello
 - [ ] Draw out page layouts
 - [ ] Study up on technologies that will be used
 - [ ]

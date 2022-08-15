@@ -20,7 +20,7 @@ As a cook I want to see all recipes on one page
 
 ---
 
-As a cook I want to organise recipes by breakfast - lunch - dinner - dessert - drinks
+As a cook I want to organize recipes by breakfast - lunch - dinner - dessert - drinks
 
 ---
 
