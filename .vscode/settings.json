@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "\\\\wsl.localhost\\Ubuntu\\home\\fedau\\recipe-website\\recipe-app\\prisma\\db.sqlite",
+      "name": "recipe"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
