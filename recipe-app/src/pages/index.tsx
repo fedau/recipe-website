@@ -1,6 +1,10 @@
+import { recipe } from "@prisma/client";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { prisma } from "../server/db/client";
+
+type Props =
+  { recipes: recipe[] };
 
 // Fetch all recipes (in /pages/index.tsx)
 export async function getStaticProps() {
@@ -11,7 +15,7 @@ export async function getStaticProps() {
   };
 }
 
-const Home: NextPage = ({ recipes }) => {
+const Home: NextPage = (props) => {
   return (
     <>
       <Head>
@@ -28,9 +32,11 @@ const Home: NextPage = ({ recipes }) => {
           This stack uses: a lot of time and effort and we will never make it
         </p>
         <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-3 lg:w-2/3">
-          {recipes.map((recipe) => (
+          {((props as Props).recipes as recipe[]).map((recipe) => (
             <div>
               <p>{recipe?.title}</p>
+              <p>{recipe?.description}</p>
+              <p>{recipe?.ingredients}</p>
             </div>
           ))}
         </div>
