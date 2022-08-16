@@ -9,6 +9,6 @@
     padding: theme("spacing.6");
     box-shadow: theme("boxShadow.xl");
 
-    @apply hover:bg-green-300;
+    @apply hover:bg-terra;
   }
 }
