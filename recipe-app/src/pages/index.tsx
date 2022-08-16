@@ -32,7 +32,7 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         </p>
         <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-3 lg:w-2/3">
           {recipes.map((recipe) => (
-            <div>
+            <div key={recipe.id}>
               <p>{recipe?.title}</p>
               <p>{recipe?.description}</p>
               <p>{recipe?.ingredients}</p>
