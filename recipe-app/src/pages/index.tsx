@@ -26,7 +26,7 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mx-auto flex flex-col min-h-screen p-2 content-start">
+      <main className="container mx-auto flex flex-col min-h-screen p-2 justify-center">
         <h1 className="text-3xl md:text-[3rem] leading-normal font-extrabold text-gray-900">
           <span className="text-phatalo">
             Bungalow <div className="text-terra ">Bears</div>
@@ -35,6 +35,7 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         <p className="text-2xl text-center text-gray-700">
           Hiya here are all our recipes! enjoy cooking
         </p>
+        <img src="(../assets/main.jpeg)" alt="test image" />
         <div className=" grid gap-3 pt-3 mt-3 text-center  md:grid-cols-3 lg:grid-cols-5 lg:w-2/3">
           {recipes.map((recipe) => (
             <div className="card" key={recipe.id}>
