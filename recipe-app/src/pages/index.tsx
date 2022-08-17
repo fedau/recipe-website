@@ -2,6 +2,8 @@ import { Recipe } from "@prisma/client";
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { prisma } from "../server/db/client";
+import Image from "next/image";
+import banner from "./assets/main.jpeg";
 
 type RecipesProps = { recipes: Recipe[] };
 
@@ -35,7 +37,7 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         <p className="text-2xl text-center text-gray-700">
           Hiya here are all our recipes! enjoy cooking
         </p>
-        <img src="(../assets/main.jpeg)" alt="test image" />
+        <Image src={banner} alt="test image" height={300} width={400} />
         <div className="grid gap-3 pt-3 mt-3 content-end  md:grid-cols-3 lg:grid-cols-5 ">
           {recipes.map((recipe) => (
             <div className="card" key={recipe.id}>
