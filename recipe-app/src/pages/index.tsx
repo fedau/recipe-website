@@ -2,6 +2,8 @@ import { Recipe } from "@prisma/client";
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { prisma } from "../server/db/client";
+import Image from 'next/image'
+import mainBanner from '../public/main.jpeg'
 
 type RecipesProps = { recipes: Recipe[] };
 
@@ -35,7 +37,13 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         <p className="text-2xl text-center text-gray-700">
           Hiya here are all our recipes! enjoy cooking
         </p>
-        <img src="(../assets/main.jpeg)" alt="test image" />
+        <Image src={mainBanner}
+          alt="Picture of the author"
+        // width={500} automatically provided
+        // height={500} automatically provided
+        // blurDataURL="data:..." automatically provided
+        // placeholder="blur" // Optional blur-up while loading
+        />
         <div className="grid gap-3 pt-3 mt-3 content-end  md:grid-cols-3 lg:grid-cols-5 ">
           {recipes.map((recipe) => (
             <div className="card" key={recipe.id}>
