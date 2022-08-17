@@ -18,7 +18,7 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
   return (
     <>
       <Head>
-        <title>lets create this fucking websites</title>
+        <title>recipe</title>
         <meta
           name="description"
           content="Created by Fedau and mentored by Ilger"
