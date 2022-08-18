@@ -3,7 +3,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { prisma } from "../server/db/client";
 import Image from "next/image";
-import banner from "./assets/main.jpeg";
+import banner from "../public/main.jpeg";
 
 type RecipesProps = { recipes: Recipe[] };
 
@@ -28,17 +28,24 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mx-auto flex flex-col min-h-screen p-2">
+      <main className="container mx-auto w-11/12 flex flex-col min-h-screen p-2">
         <h1 className="text-3xl md:text-[3rem] leading-normal font-extrabold text-gray-900">
-          <span className="text-phatalo">
-            Bungalow <div className="text-terra ">Bears</div>
-          </span>
+          <span className="text-egg">Bungalow Bears</span>
         </h1>
         <p className="text-2xl text-center text-gray-700">
           Hiya here are all our recipes! enjoy cooking
         </p>
-        <Image src={banner} alt="test image" height={300} width={400} />
-        <div className="grid gap-3 pt-3 mt-3 content-end  md:grid-cols-3 lg:grid-cols-5 ">
+        {/* <span className="justify-center bg-contain"> */}
+        <Image
+          src={banner}
+          alt="test image"
+          height="300"
+          width="250"
+          className="bg-gradient-to-bl"
+        />
+        {/* </span> */}
+
+        <div className="grid gap-3 pt-3 mt-3  md:grid-cols-3 lg:grid-cols-5 ">
           {recipes.map((recipe) => (
             <div className="card" key={recipe.id}>
               <p className="font-bold text-#123524">{recipe?.title}</p>
