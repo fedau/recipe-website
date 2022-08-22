@@ -28,7 +28,7 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mx-auto w-11/12 flex flex-col min-h-screen p-2">
+      <main className="container mx-auto w-11/12 flex flex-col min-h-screen p-4">
         <h1 className="text-3xl md:text-[3rem] leading-normal font-extrabold text-gray-900">
           <span className="text-egg">Bungalow Bears</span>
         </h1>
@@ -56,6 +56,7 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
             </div>
           ))}
           <p className="card">
+            <Image src={banner} />
             mor text as a test <br /> mora and more to say
           </p>
           <p className="card">
@@ -82,6 +83,9 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
           </p>
         </div>
       </main>
+      <footer className="p-5">
+        This website is made by two experienced developers
+      </footer>
     </>
   );
 };
