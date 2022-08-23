@@ -4,6 +4,7 @@ import Head from "next/head";
 import { prisma } from "../server/db/client";
 import Image from "next/image";
 import banner from "../public/main.jpeg";
+import Nav from "./components/navbar";
 
 type RecipesProps = { recipes: Recipe[] };
 
@@ -27,11 +28,8 @@ const Home: NextPage<RecipesProps> = ({ recipes }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Nav />
       <main className="container mx-auto w-11/12 flex flex-col min-h-screen p-4">
-        <h1 className="text-3xl md:text-[3rem] leading-normal font-extrabold text-gray-900">
-          <span className="text-egg">Bungalow Bears</span>
-        </h1>
         <p className="text-2xl text-center text-gray-700">
           Hiya here are all our recipes! enjoy cooking
         </p>
