@@ -26,6 +26,6 @@ A detailed list of tasks required to setup the first POC.
       run `pnpm prisma studio`
 - [x] add first recipe in database
       in prisma studio select the recipe table and click add new record and add new a new recipe
-- [ ] querie recipes table to get the data
-- [ ] write the html list of recipes card
-- [ ] insert data into html
+- [x] querie recipes table to get the data
+- [x] write the html list of recipes card
+- [x] insert data into html
