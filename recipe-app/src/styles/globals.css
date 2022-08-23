@@ -13,4 +13,12 @@
     @apply hover:bg-blue;
     /* @apply border-black; */
   }
+  .button {
+    border-radius: theme("borderRadius.md");
+
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.xl");
+
+    @apply hover:bg-blue;
+  }
 }
