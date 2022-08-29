@@ -16,3 +16,17 @@ export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
 });
+
+// module.exports = {
+//   experimental: {
+//     images: {
+//       allowFutureImage: true,
+//     },
+//   },
+// };
+
+// experimental: {
+//   images: {
+//     allowFutureImage: true;
+//   }
+// }
